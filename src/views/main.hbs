@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>CMG 2012</title> 
+	<link rel="stylesheet" href="/stylemain.css">
+	<script src="/socket.io/socket.io.js"></script>
+	<a class="topcorner" href="/logout">Logout</a>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body> 
+	<h2>Siebel Server Management 2012</h2>
+	<h3>Welcome {{ name}}</h3>
+	<h3>Select from the list to start the check</h3>
+
+	<input type="radio" id="Entreprise_1" name="LeveltoStart" value="Entreprise" onclick="show1()">Entreprise</br>
+	<input type="radio" id="Server_2" name="LeveltoStart" value="Server" onclick="show2()">Server</br>
+	<input type="radio" id="component_3" name="LeveltoStart" value="Component" onclick="show3()">Component</br>
+	</br>	
+		<div id="comp_operation" style="display:none">
+			<label>*Select the Component operation to perform</label>
+			
+			<select id="operation_id" onchange="show4()">
+				<option name="operation" value="Please select" disabled selected hidden>Please select</option>
+				<option name="operation" value="List">Check component status</option>
+				<option name="operation" value="Start">Start component</option>
+				<option name="operation" value="Restart">Restart component</option>
+			</select>
+		</div>
+		
+	</br>
+		
+		<div id="comp_select" style="display:none">
+			<label>**Select the component</label>
+			
+			<select id="comp_select_id" onchange="show5()">
+				<option value="Please select" disabled selected hidden>Please select</option>
+				<option id="1" value="WfProcBatchMgr">Workflow process batch manager</option>
+				<option id="2" value="EAIObjMgr_enu">EAI object manager</option>
+				<option id="3" value="WfProcMgr">Workflow process manager</option>
+				<option id="4" value="PSCcObjMgr_enu">Object Manager HI</option>
+			</select>
+		</div>
+		
+		<div id="server_operation" style="display:none">
+			<label>*Select the Server operation to perform</label>		
+			
+			<select id="server_operation_id" onchange="show6()">
+				<option name="operation" value="Please select" disabled selected hidden>Please select</option>
+				<option name="operation" value="Listserver">List all servers</option>
+				<option name="operation" value="StartServer">Start Server</option>
+				<option name="operation" value="Restartserver">Restart the server</option>
+				<option name="operation" value="FindPId">Find a processId</option>
+				<option name="operation" value="KillPId">Kill a processId</option>
+				<option name="operation" value="runCommand">Run SrvrMgr Command</option>
+				<option name="operation" value="runSQL">Run SQL</option>
+			</select>
+			
+			<div id="formId" style="display:none">
+			<label id="ScriptId">Please provide script to run:</label>
+			<textarea id="ScriptContent" rows="3" cols="50" placeholder="script to run"></textarea>
+			</div>
+		</div>
+		
+		<div id = "Enterprise_operation" style="display:none">
+			<label>*To restart Enterprise server please select time: </label>
+			<input type="datetime-local" id="time_id">
+		</div>
+		
+		</br>
+		<button id="button_click"style="display:none">Submit</button></br>
+		
+		<div id="result" class="result_output" style="display:none">
+			Progressing....
+		</div>
+		
+	 <script src="/utlis.js"></script>
+    
+	 
+</body> 
+</html>                 

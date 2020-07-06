@@ -1,0 +1,32 @@
+h2 {
+color: green;
+margin-right: 30px;
+}
+
+body{
+background-color: lightgrey;
+opacity: 0.9;
+font-weight: bold;
+position: fixed;
+top: 20%;
+left: 55%;
+margin-top: -100px;
+margin-left: -200px;
+}
+
+input {
+line-height: 14px;
+width: 250px;
+padding: 6px 6px;
+}
+
+button {
+cursor: pointer;
+padding: 11px;
+color: #fff;
+font-family: arial;
+line-height: .7;
+background-color: #385427;
+text-align: centre;
+margin-left: 100px;
+}

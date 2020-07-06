@@ -1,0 +1,38 @@
+{
+  "name": "learnnodejs",
+  "version": "6.4.1",
+  "description": "\"a package manager for JavaScript\",",
+  "main": "Y",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "git123"
+  ],
+  "author": "Alok",
+  "license": "SEE LICENSE IN <filename>",
+  "dependencies": {
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "hbs": "^4.1.0",
+    "line-reader": "^0.4.0",
+    "log-timestamp": "^0.3.0",
+    "nocache": "^2.1.0",
+    "node-ssh": "^6.0.0",
+    "oracledb": "^4.2.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "query-string": "^6.12.1",
+    "shelljs": "^0.8.3",
+    "simple-ssh": "^1.0.0",
+    "socket.io": "^2.3.0",
+    "uniqid": "^5.2.0"
+  }
+}
