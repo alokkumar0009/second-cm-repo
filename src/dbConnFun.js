@@ -1,5 +1,5 @@
 const oracledb = require('oracledb')
-const dbConfig = require('./dbconfig.js')
+const dbConfig = require('./dbConfig.js')
 oracledb.autoCommit = true;
 oracledb.outFormat = oracledb.ARRAY
 var uniqid = require('uniqid');
