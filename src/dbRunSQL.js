@@ -1,7 +1,7 @@
 const oracledb = require('oracledb')
 const fs = require('fs')
 oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT
-const dbConfig = require('./dbconfig.js')
+const dbConfig = require('./dbConfig.js')
 
 // Number of rows to return from each call to getRows()
 const numRows = 100;
