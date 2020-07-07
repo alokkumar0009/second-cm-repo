@@ -13,6 +13,7 @@ const dbRunSQL = require('./dbRunSQL.js')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 const server = http.createServer(app)
 const io =socketio(server)
 
@@ -240,8 +241,8 @@ next()
 }
 
 console.log(timestamp)
-server.listen(3000,()=>{
-console.log('Server is up and running.')
+server.listen(port,()=>{
+console.log('Server is up and running on port: '+port)
 })
 
 
